@@ -54,8 +54,6 @@ restService.post("/aspect", function(req, res) {
       ? req.body.queryResult.parameters.date
       : "Seems like some problem. Speak again.";
   
-  var amount = req.body.queryResult.parameters.cardinal;
-  
   var speechResponse = {
     google: {
       expectUserResponse: true,
