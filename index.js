@@ -28,7 +28,7 @@ restService.post("/echo", function(req, res) {
       ? req.body.queryResult.parameters.paydate
       : "Seems like some problem. Speak again.";
   
-  var speech = "Hello"+amount;
+  var speech = "Thank you! I have made of note of your payment of "+amount+"on "+date;
   
   var speechResponse = {
     google: {
