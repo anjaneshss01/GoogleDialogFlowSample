@@ -63,7 +63,7 @@ restService.post("/aspect", function(req, res) {
         items: [
           {
             simpleResponse: {
-              textToSpeech: amount;
+              textToSpeech: speech;
             }
           }
         ]
