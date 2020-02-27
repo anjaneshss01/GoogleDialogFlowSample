@@ -28,7 +28,20 @@ restService.post("/echo", function(req, res) {
       ? req.body.queryResult.parameters.paydate
       : "Seems like some problem. Speak again.";
   
-  var speech = "Thank you! I have made of note of your payment of "+amount+"on "+date;
+  var fdate = new Date(date);
+  var year = date.getFullYear();
+  var month = date.getMonth()+1;
+  var dt = date.getDate();
+
+  if (dt < 10) {
+    dt = '0' + dt;
+  }
+  if (month < 10) {
+    month = '0' + month;
+  }
+  var newDate = dt+"-"+month+"-"+year;
+  
+  var speech = "Thank you! I have made of note of your payment of Rs. "+amount+"on "+date;
   
   var speechResponse = {
     google: {
