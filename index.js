@@ -13,7 +13,7 @@ restService.use(
 
 restService.use(bodyParser.json());
 
-restService.post("/echo", function(req, res) {
+restService.post("/abcbank", function(req, res) {
   var amount =
     req.body.queryResult &&
     req.body.queryResult.parameters &&
@@ -51,7 +51,7 @@ restService.post("/echo", function(req, res) {
     fulfillmentText: speech,
     speech: speech,
     displayText: speech,
-    source: "webhook-echo-sample"
+    source: "webhook-Aspect"
   });
 });
 
